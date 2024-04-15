@@ -15,7 +15,7 @@ inputs:
   summary:
     description: 'Expandable block summary'
     required: false
-  github-token:
+  github_token:
     description: 'GitHub token to authenticate'
     required: true
 
@@ -29,7 +29,7 @@ runs:
         TITLE: Terraform output
         SUMMARY: terraform output
       with:
-        github-token: ${{inputs.github-token}}
+        github-token: ${{inputs.github_token}}
         script: |
           const {readFileSync} = require('fs')
 
