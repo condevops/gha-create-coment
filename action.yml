@@ -29,7 +29,7 @@ runs:
         TITLE: Terraform output
         SUMMARY: terraform output
       with:
-        github-token: ${{inputs.GITHUB_TOKEN}}
+        github-token: ${{inputs.github-token}}
         script: |
           const {readFileSync} = require('fs')
 
