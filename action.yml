@@ -37,7 +37,6 @@ runs:
       env:
         title: ${{inputs.title}}
         summary: ${{inputs.summary}}
-        chunk: ${{inputs.chunk_size}}
         filename: ${{inputs.filename}}
       with:
         github-token: ${{inputs.github_token}}
@@ -47,7 +46,7 @@ runs:
           const title = process.env.title
           const block_summary = process.env.summary
           const str = readFileSync(process.env.filename, 'utf-8');
-          const len = process.env.filename
+          const len = ${{inputs.chunk_size}}
           const size = Math.ceil(str.length/len)
           const chunks = Array(size)
           let offset = 0
