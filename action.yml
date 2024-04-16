@@ -29,6 +29,7 @@ runs:
       if: ${{ inputs.content }}
       env:
         content: ${{inputs.content}}
+      shell: bash
       run: echo "$content" > ${{inputs.filename}}
 
     - name: Create PR
